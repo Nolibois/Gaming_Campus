@@ -1,0 +1,557 @@
+@font-face {
+  font-family: "Montserrat-thin";
+  src: url(./assets/font/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-med";
+  src: url(./assets/font/Montserrat-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat-thin", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat-med";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+header {
+  height: 100vh;
+}
+
+nav {
+  font-family: "Montserrat-med", sans-serif;
+  font-size: 0.9rem;
+  height: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+nav,
+#presentation {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#presentation {
+  font-size: 1.5rem;
+}
+
+#presentation a {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.presta-gaming a,
+#news_room a {
+  font-family: "Montserrat-med", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  /* font-weight: bold; */
+}
+
+#presentation a:hover,
+#presta a:hover,
+#news_room a:hover {
+  background: rgba(141, 113, 122, 0.247);
+  border: 1px solid rgba(141, 113, 122, 0.247);
+}
+
+header,
+#presentation {
+  text-align: center;
+}
+
+ul {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-27px);
+  height: 6px;
+  width: 0;
+  background: #5f04aa;
+  opacity: 0;
+  transform-origin: left;
+}
+
+nav a:hover {
+  color: #5f04aa;
+}
+
+nav a:hover::before {
+  animation: selected-menu ease-in-out 0.3s forwards;
+  border-radius: 3px;
+}
+
+@keyframes selected-menu {
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+nav ul :nth-child(8) a {
+  height: 70%;
+  background: #e0e0e0;
+  border-radius: 20px;
+  width: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#presentation {
+  background: url(./assets/img/bg.jpg) center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+#presentation a {
+  color: white;
+  border: 1px solid white;
+  padding: 15px 20px;
+}
+
+#presentation p {
+  padding: 40px 0;
+}
+
+#comment {
+  height: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 7%;
+}
+
+#presta {
+  background: #151515;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10% 15%;
+  text-align: center;
+  height: 400px;
+}
+
+.presta-gaming {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.presta-gaming h1 {
+  font-size: 1rem;
+}
+
+.presta-gaming a {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  width: 70%;
+}
+
+#campus {
+  padding: 5% 15%;
+  background: #f7f7f7;
+}
+
+#news_room {
+  display: grid;
+  grid-template-columns: 70% 20%;
+  align-items: center;
+  padding: 3% 0 7%;
+  height: 60px;
+}
+
+#news_room a {
+  padding: 0 20px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 140px;
+}
+
+#news_room div:nth-child(1) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#news_room div:nth-child(2) {
+  height: 100%;
+}
+
+#news {
+  display: flex;
+  justify-content: space-between;
+  height: 525px;
+  padding: 3% 0;
+}
+
+#news img {
+  border-radius: 3px;
+  box-shadow: 0 0 8px 4px rgba(50, 20, 30, 0.2);
+}
+
+.news_1,
+.news_2,
+.news_3 {
+  width: 255px;
+  position: relative;
+}
+
+#news h2,
+#news p {
+  padding: 20px 0 0;
+}
+
+#news h2,
+#news a {
+  font-family: "Montserrat-med";
+}
+
+#news h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#news a {
+  font-size: 0.65rem;
+  position: absolute;
+  letter-spacing: 0.1rem;
+  color: #8843b3;
+  text-transform: uppercase;
+  bottom: 10px;
+}
+
+#news p,
+footer {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+}
+
+footer h2 {
+  font-family: "Montserrat-med", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#infos {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 15%;
+  height: 250px;
+}
+
+#infos h2 {
+  padding-bottom: 20px;
+}
+
+#praticols_infos ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#praticols_infos,
+#parents_infos,
+.img {
+  padding-right: 5%;
+  height: 100%;
+}
+
+#praticols_infos ul,
+#parents_infos ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#praticols_infos li {
+  list-style-type: none;
+}
+
+#praticols_infos a {
+  text-decoration: none;
+  color: #ae90f1;
+}
+
+#parents_infos p {
+  padding-bottom: 20px;
+}
+
+#parents_infos a {
+  color: #ae90f1;
+}
+
+.img,
+#infos div {
+  width: 25%;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact div {
+  width: 100%;
+}
+
+#contact h2 {
+  padding-bottom: 20px;
+}
+
+#contact_us a {
+  color: #ae90f1;
+}
+
+#logo_social {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo_social img {
+  width: 20px;
+}
+
+#talk_about_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15%;
+  position: relative;
+}
+
+#talk_about_us::before {
+  content: "";
+  position: absolute;
+  transform: translate(22%, -55px);
+  background: rgb(231, 226, 226);
+  height: 1px;
+  width: 46%;
+}
+
+#talk_about_us h2 {
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+}
+
+#logos_magasins {
+  height: 20px;
+  padding: 0 5px;
+}
+
+#logos_magasins img {
+  transform: scale(0.8);
+}
+
+#partners {
+  background: #171717;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 40px;
+}
+
+#logos_partners {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 72%;
+}
+
+@media screen and (max-width: 1250px) {
+  #logos_partners {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #news {
+    border-top: 1px solid rgb(231, 226, 226);
+  }
+
+  #news img {
+    width: 330px;
+    align-self: center;
+  }
+
+  #news a {
+    position: relative;
+    padding-top: 30px;
+  }
+
+  #news,
+  #news_room {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .news_1,
+  .news_2,
+  .news_3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  #news_room :nth-child(1) {
+    padding-bottom: 20px;
+    align-items: center;
+  }
+
+  #news_room :nth-child(2) a {
+    padding-bottom: 0;
+  }
+
+  #news h2,
+  #news p {
+    padding: 30px 0 0;
+  }
+
+  #infos {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  nav {
+    display: none;
+  }
+
+  #presentation {
+    padding: 0 10%;
+  }
+
+  #comment {
+    height: 20%;
+    font-size: 1.2rem;
+  }
+
+  #presta {
+    flex-direction: column;
+    padding: 15% 25%;
+    height: 100%;
+  }
+
+  .presta-gaming {
+    width: 100%;
+  }
+
+  .presta-gaming h1,
+  .presta-gaming p {
+    padding-top: 20px;
+  }
+
+  .presta-gaming a {
+    margin-top: 30px;
+  }
+
+  #infos {
+    display: none;
+  }
+
+  #talk_about_us {
+    display: none;
+  }
+
+  #logos_partners {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #logos_partners img {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    min-width: 320px;
+  }
+  #presentation {
+    height: 70%;
+    font-size: 1rem;
+  }
+
+  #comment {
+    height: 30%;
+  }
+
+  #presta {
+    padding: 15% 15%;
+  }
+
+  #news img {
+    width: 280px;
+  }
+
+  .logo-campus {
+    width: 100%;
+  }
+
+  #presta :nth-child(2) img {
+    padding-top: 30px;
+  }
+}

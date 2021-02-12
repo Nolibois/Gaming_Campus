@@ -530,13 +530,19 @@ footer h2 {
   body {
     min-width: 320px;
   }
+  
   #presentation {
     height: 70%;
     font-size: 1rem;
   }
+  
+  #presentation p{
+    padding: 20px 0;
+  }
 
   #comment {
     height: 30%;
+    font-size: 1rem;
   }
 
   #presta {
